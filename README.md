@@ -24,7 +24,7 @@ And then execute:
     HMService.sharedService.setup "Hipmob App ID", withLaunchOptions:options
     ```
 
-2. Open chat
+2. Open search
 
     ```ruby
     HMService.sharedService.openHelpdeskSearch self, withSetup: lambda {|controller|
@@ -32,7 +32,8 @@ And then execute:
       controller.chatEnabled = true
     }
     ```
-3. Open search
+3. Open chat
+
     ```ruby
     HMService.sharedService.openChat self, withSetup: lambda {|controller|
       controller.body.title = "Support Chat"
