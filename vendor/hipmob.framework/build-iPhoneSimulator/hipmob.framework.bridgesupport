@@ -1,0 +1,1887 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<string_constant name='HIPMOB_LIBRARY_VERSION_STRING' nsstring='true' value='3.3.3'/>
+<enum name='HMContentHelpDeskArticleChatEnabledAlways' value='0'/>
+<enum name='HMContentHelpDeskArticleChatEnabledIfOperatorAvailable' value='1'/>
+<enum name='HMContentHelpDeskArticleChatEnabledNever' value='2'/>
+<enum name='HMContentHelpDeskSearchChatEnabledAlways' value='0'/>
+<enum name='HMContentHelpDeskSearchChatEnabledIfOperatorAvailable' value='1'/>
+<enum name='HMContentHelpDeskSearchChatEnabledNever' value='2'/>
+<enum name='HMHelpDeskSearchChatEnabledAlways' value='0'/>
+<enum name='HMHelpDeskSearchChatEnabledIfOperatorAvailable' value='1'/>
+<enum name='HMHelpDeskSearchChatEnabledNever' value='2'/>
+<class name='HMChatMessage'>
+<method selector='app'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='attributes'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='body'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='context'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='created'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='from'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='queued'>
+<retval declared_type='NSInteger' type='i' type64='q'/>
+</method>
+<method selector='remoteId'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='sender'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='session'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='subtype'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='to'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='updated'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+</class>
+<class name='HMChatOperatorAvailabilityCheck'>
+<method selector='cancel'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andNotify:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='id' index='1' name='delegate' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMChatPopoverController'>
+<method selector='content'>
+<retval declared_type='HMChatViewController*' type='@'/>
+</method>
+<method selector='dismiss'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithView:andAppID:andUser:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithView:andAppID:andUser:andInfo:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='info' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithView:andAppID:andUser:andPeer:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSString*' index='3' name='peer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='landscape'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='portrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setLandscape:'>
+<arg declared_type='BOOL' index='0' name='landscape' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLandscapePosition:'>
+<arg declared_type='CGRect' index='0' name='newLandscape' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortrait:'>
+<arg declared_type='BOOL' index='0' name='portrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortraitPosition:'>
+<arg declared_type='CGRect' index='0' name='newPortrait' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='show'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMChatView'>
+<method selector='app'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='clearCustomDataForKey:'>
+<arg declared_type='NSString*' index='0' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearPushToken'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='connect'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithFrame:andAppID:andUser:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrame:andAppID:andUser:andInfo:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='info' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrame:andAppID:andUser:andPeer:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSString*' index='3' name='peer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrame:andConnection:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='HMRemoteConnection*' index='1' name='connection' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithFrame:andConnection:andPeer:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='HMRemoteConnection*' index='1' name='connection' type='@'/>
+<arg declared_type='NSString*' index='2' name='peer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='input'>
+<retval declared_type='UITextView*' type='@'/>
+</method>
+<method selector='isConnected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='maxInputLines'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='peer'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='placeholder'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='placeholderColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='receivedExtraPadding'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='receivedMargin'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='receivedMessageFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='receivedPadding'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='receivedTextColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='send'>
+<retval declared_type='UIButton*' type='@'/>
+</method>
+<method selector='sendMessage:'>
+<arg declared_type='NSString*' index='0' name='text' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='sentExtraPadding'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='sentMargin'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='sentMessageFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='sentPadding'>
+<retval declared_type='UIEdgeInsets' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+</method>
+<method selector='sentTextColor'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='setCustomData:forKey:'>
+<arg declared_type='NSString*' index='0' name='data' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGroup:'>
+<arg declared_type='NSString*' index='0' name='group' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxInputLines:'>
+<arg declared_type='int' index='0' name='maxInputLines' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlaceholder:'>
+<arg declared_type='NSString*' index='0' name='placeholder' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlaceholderColor:'>
+<arg declared_type='UIColor*' index='0' name='placeholderColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPushToken:'>
+<arg declared_type='NSData*' index='0' name='pushtoken' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReceivedExtraPadding:'>
+<arg declared_type='UIEdgeInsets' index='0' name='receivedExtraPadding' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReceivedMargin:'>
+<arg declared_type='UIEdgeInsets' index='0' name='receivedMargin' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReceivedMessageFont:'>
+<arg declared_type='UIFont*' index='0' name='receivedMessageFont' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReceivedPadding:'>
+<arg declared_type='UIEdgeInsets' index='0' name='receivedPadding' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setReceivedTextColor:'>
+<arg declared_type='UIColor*' index='0' name='receivedTextColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSentExtraPadding:'>
+<arg declared_type='UIEdgeInsets' index='0' name='sentExtraPadding' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSentMargin:'>
+<arg declared_type='UIEdgeInsets' index='0' name='sentMargin' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSentMessageFont:'>
+<arg declared_type='UIFont*' index='0' name='sentMessageFont' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSentPadding:'>
+<arg declared_type='UIEdgeInsets' index='0' name='sentPadding' type='{UIEdgeInsets=ffff}' type64='{UIEdgeInsets=dddd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSentTextColor:'>
+<arg declared_type='UIColor*' index='0' name='sentTextColor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='table'>
+<retval declared_type='UITableView*' type='@'/>
+</method>
+<method selector='toolbar'>
+<retval declared_type='UIToolbar*' type='@'/>
+</method>
+<method selector='updateContext:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateEmail:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateGeolocation:'>
+<arg declared_type='CLLocation*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateLocation:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateName:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMChatViewController'>
+<method selector='body'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='chatDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='chatView'>
+<retval declared_type='HMChatView*' type='@'/>
+</method>
+<method selector='closeRequested'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='connect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disableKeyboardAdjustment'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableWebViewGestures'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='extraBarButtonItems'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='forcePortrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hidesAvailabilityIndicator'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithAppID:andUser:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='info' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andUser:andPeer:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<arg declared_type='NSString*' index='2' name='peer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isConnected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='overridePreferredStatusBarStyle'>
+<retval declared_type='UIStatusBarStyle' type='i' type64='q'/>
+</method>
+<method selector='requireFullscreen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setChatDelegate:'>
+<arg declared_type='id' index='0' name='chatDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableKeyboardAdjustment:'>
+<arg declared_type='BOOL' index='0' name='disableKeyboardAdjustment' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableWebViewGestures:'>
+<arg declared_type='BOOL' index='0' name='disableWebViewGestures' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtraBarButtonItems:'>
+<arg declared_type='NSArray*' index='0' name='extraBarButtonItems' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForcePortrait:'>
+<arg declared_type='BOOL' index='0' name='forcePortrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHidesAvailabilityIndicator:'>
+<arg declared_type='BOOL' index='0' name='hidesAvailabilityIndicator' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOverridePreferredStatusBarStyle:'>
+<arg declared_type='UIStatusBarStyle' index='0' name='overridePreferredStatusBarStyle' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequireFullscreen:'>
+<arg declared_type='BOOL' index='0' name='requireFullscreen' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldUseSystemBrowser:'>
+<arg declared_type='BOOL' index='0' name='shouldUseSystemBrowser' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldUseSystemBrowser'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='statusView'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method selector='view:'>
+<arg declared_type='NSString*' index='0' name='url' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='view:withTitle:'>
+<arg declared_type='NSString*' index='0' name='url' type='@'/>
+<arg declared_type='NSString*' index='1' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMContentChatViewController'>
+<method selector='chatDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='chatView'>
+<retval declared_type='HMChatView*' type='@'/>
+</method>
+<method selector='closeRequested'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='connect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disableKeyboardAdjustment'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableWebViewGestures'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disconnect'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='extraBarButtonItems'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='forcePortrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='hidesAvailabilityIndicator'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithAppID:andUser:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='info' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andUser:andPeer:'>
+<arg declared_type='NSString*' index='0' name='appid' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<arg declared_type='NSString*' index='2' name='peer' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isConnected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='requireFullscreen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setChatDelegate:'>
+<arg declared_type='id' index='0' name='chatDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableKeyboardAdjustment:'>
+<arg declared_type='BOOL' index='0' name='disableKeyboardAdjustment' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableWebViewGestures:'>
+<arg declared_type='BOOL' index='0' name='disableWebViewGestures' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtraBarButtonItems:'>
+<arg declared_type='NSArray*' index='0' name='extraBarButtonItems' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForcePortrait:'>
+<arg declared_type='BOOL' index='0' name='forcePortrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHidesAvailabilityIndicator:'>
+<arg declared_type='BOOL' index='0' name='hidesAvailabilityIndicator' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequireFullscreen:'>
+<arg declared_type='BOOL' index='0' name='requireFullscreen' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldUseSystemBrowser:'>
+<arg declared_type='BOOL' index='0' name='shouldUseSystemBrowser' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldUseSystemBrowser'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='statusView'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+</class>
+<class name='HMContentHelpDeskArticleViewController'>
+<method selector='articleViewDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='chatEnabled'>
+<retval declared_type='HMContentHelpDeskArticleChatEnabled' type='i' type64='q'/>
+</method>
+<method selector='closeRequested'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disableKeyboardAdjustment'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableWebViewGestures'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='extraBarButtonItems'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='forcePortrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='getTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithAppID:andArticle:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andArticle:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andArticleURL:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleUrl' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='requireFullscreen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setArticleViewDelegate:'>
+<arg declared_type='id' index='0' name='articleViewDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setChatEnabled:'>
+<arg declared_type='HMContentHelpDeskArticleChatEnabled' index='0' name='chatEnabled' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableKeyboardAdjustment:'>
+<arg declared_type='BOOL' index='0' name='disableKeyboardAdjustment' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableWebViewGestures:'>
+<arg declared_type='BOOL' index='0' name='disableWebViewGestures' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtraBarButtonItems:'>
+<arg declared_type='NSArray*' index='0' name='extraBarButtonItems' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForcePortrait:'>
+<arg declared_type='BOOL' index='0' name='forcePortrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPopoverSize:'>
+<arg declared_type='CGSize' index='0' name='size' type='{CGSize=ff}' type64='{CGSize=dd}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequireFullscreen:'>
+<arg declared_type='BOOL' index='0' name='requireFullscreen' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='webView'>
+<retval declared_type='UIWebView*' type='@'/>
+</method>
+</class>
+<class name='HMContentHelpDeskSearchViewController'>
+<method selector='chatEnabled'>
+<retval declared_type='HMContentHelpDeskSearchChatEnabled' type='i' type64='q'/>
+</method>
+<method selector='disableKeyboardAdjustment'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableViewportWrap'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableWebViewGestures'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='extraBarButtonItems'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='forcePortrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithAppID:andUser:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='requireFullscreen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='searchDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='searchView'>
+<retval declared_type='HMHelpDeskSearchView*' type='@'/>
+</method>
+<method selector='setChatEnabled:'>
+<arg declared_type='HMContentHelpDeskSearchChatEnabled' index='0' name='chatEnabled' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableKeyboardAdjustment:'>
+<arg declared_type='BOOL' index='0' name='disableKeyboardAdjustment' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableViewportWrap:'>
+<arg declared_type='BOOL' index='0' name='disableViewportWrap' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableWebViewGestures:'>
+<arg declared_type='BOOL' index='0' name='disableWebViewGestures' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtraBarButtonItems:'>
+<arg declared_type='NSArray*' index='0' name='extraBarButtonItems' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForcePortrait:'>
+<arg declared_type='BOOL' index='0' name='forcePortrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequireFullscreen:'>
+<arg declared_type='BOOL' index='0' name='requireFullscreen' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSearchDelegate:'>
+<arg declared_type='id' index='0' name='searchDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldUseSystemBrowser:'>
+<arg declared_type='BOOL' index='0' name='shouldUseSystemBrowser' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldUseSystemBrowser'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='HMHelpDeskArticleViewController'>
+<method selector='body'>
+<retval declared_type='HMContentHelpDeskArticleViewController*' type='@'/>
+</method>
+<method selector='disableKeyboardAdjustment'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='forcePortrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithAppID:andArticle:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andArticle:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andArticleURL:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleUrl' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andArticleURL:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleUrl' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='overridePreferredStatusBarStyle'>
+<retval declared_type='UIStatusBarStyle' type='i' type64='q'/>
+</method>
+<method selector='requireFullscreen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setDisableKeyboardAdjustment:'>
+<arg declared_type='BOOL' index='0' name='disableKeyboardAdjustment' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForcePortrait:'>
+<arg declared_type='BOOL' index='0' name='forcePortrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOverridePreferredStatusBarStyle:'>
+<arg declared_type='UIStatusBarStyle' index='0' name='overridePreferredStatusBarStyle' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequireFullscreen:'>
+<arg declared_type='BOOL' index='0' name='requireFullscreen' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMHelpDeskArticleViewPopoverController'>
+<method selector='content'>
+<retval declared_type='HMHelpDeskArticleViewController*' type='@'/>
+</method>
+<method selector='dismiss'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithView:andAppID:andArticle:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<arg declared_type='NSString*' index='2' name='articleId' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithView:andAppID:andArticle:andUser:andInfo:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<arg declared_type='NSString*' index='2' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='3' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='4' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithView:andAppID:andArticleURL:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<arg declared_type='NSString*' index='2' name='articleUrl' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithView:andAppID:andArticleURL:andUser:andInfo:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<arg declared_type='NSString*' index='2' name='articleUrl' type='@'/>
+<arg declared_type='NSString*' index='3' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='4' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='landscape'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='portrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setLandscape:'>
+<arg declared_type='BOOL' index='0' name='landscape' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLandscapePosition:'>
+<arg declared_type='CGRect' index='0' name='newLandscape' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortrait:'>
+<arg declared_type='BOOL' index='0' name='portrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortraitPosition:'>
+<arg declared_type='CGRect' index='0' name='newPortrait' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='show'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMHelpDeskSearchPopoverController'>
+<method selector='content'>
+<retval declared_type='HMHelpDeskSearchViewController*' type='@'/>
+</method>
+<method selector='dismiss'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithView:andAppID:'>
+<arg declared_type='UIView*' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithView:andAppID:andUser:andInfo:'>
+<arg declared_type='id' index='0' name='view' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<arg declared_type='NSString*' index='2' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='landscape'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='portrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setLandscape:'>
+<arg declared_type='BOOL' index='0' name='landscape' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLandscapePosition:'>
+<arg declared_type='CGRect' index='0' name='newLandscape' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortrait:'>
+<arg declared_type='BOOL' index='0' name='portrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPortraitPosition:'>
+<arg declared_type='CGRect' index='0' name='newPortrait' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='show'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMHelpDeskSearchView'>
+<method selector='app'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='context'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='defaultQuery'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='flushCache'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithFrame:andAppID:andUser:'>
+<arg declared_type='CGRect' index='0' name='frame' type='{CGRect={CGPoint=ff}{CGSize=ff}}' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg declared_type='NSString*' index='1' name='appid' type='@'/>
+<arg declared_type='NSString*' index='2' name='userid' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='loadArticle:'>
+<arg declared_type='NSString*' index='0' name='articleId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='minimumQueryLength'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='search'>
+<retval declared_type='UISearchBar*' type='@'/>
+</method>
+<method selector='setContext:'>
+<arg declared_type='NSString*' index='0' name='context' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultQuery:'>
+<arg declared_type='NSString*' index='0' name='defaultQuery' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumQueryLength:'>
+<arg declared_type='int' index='0' name='minimumQueryLength' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTagFilter:'>
+<arg declared_type='NSString*' index='0' name='tagFilter' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='table'>
+<retval declared_type='UITableView*' type='@'/>
+</method>
+<method selector='tagFilter'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='user'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='HMHelpDeskSearchViewController'>
+<method selector='body'>
+<retval declared_type='UIViewController*' type='@'/>
+</method>
+<method selector='chatEnabled'>
+<retval declared_type='HMHelpDeskSearchChatEnabled' type='i' type64='q'/>
+</method>
+<method selector='closeRequested'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='disableKeyboardAdjustment'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableViewportWrap'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='disableWebViewGestures'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='extraBarButtonItems'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='forcePortrait'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithAppID:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAppID:andUser:andInfo:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='user' type='@'/>
+<arg declared_type='NSDictionary*' index='2' name='userInfo' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='overridePreferredStatusBarStyle'>
+<retval declared_type='UIStatusBarStyle' type='i' type64='q'/>
+</method>
+<method selector='requireFullscreen'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='searchDelegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='searchView'>
+<retval declared_type='HMHelpDeskSearchView*' type='@'/>
+</method>
+<method selector='setChatEnabled:'>
+<arg declared_type='HMHelpDeskSearchChatEnabled' index='0' name='chatEnabled' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableKeyboardAdjustment:'>
+<arg declared_type='BOOL' index='0' name='disableKeyboardAdjustment' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableViewportWrap:'>
+<arg declared_type='BOOL' index='0' name='disableViewportWrap' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDisableWebViewGestures:'>
+<arg declared_type='BOOL' index='0' name='disableWebViewGestures' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setExtraBarButtonItems:'>
+<arg declared_type='NSArray*' index='0' name='extraBarButtonItems' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForcePortrait:'>
+<arg declared_type='BOOL' index='0' name='forcePortrait' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOverridePreferredStatusBarStyle:'>
+<arg declared_type='UIStatusBarStyle' index='0' name='overridePreferredStatusBarStyle' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRequireFullscreen:'>
+<arg declared_type='BOOL' index='0' name='requireFullscreen' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSearchDelegate:'>
+<arg declared_type='id' index='0' name='searchDelegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldUseSystemBrowser:'>
+<arg declared_type='BOOL' index='0' name='shouldUseSystemBrowser' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldUseSystemBrowser'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='view:'>
+<arg declared_type='NSString*' index='0' name='url' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='view:withTitle:'>
+<arg declared_type='NSString*' index='0' name='url' type='@'/>
+<arg declared_type='NSString*' index='1' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMRegisterUser'>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithUser:andApp:andPushToken:andInfo:withDelegate:'>
+<arg declared_type='NSString*' index='0' name='user' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<arg declared_type='NSString*' index='2' name='token' type='@'/>
+<arg declared_type='NSDictionary*' index='3' name='userinfo' type='@'/>
+<arg declared_type='id' index='4' name='registrationDelegate' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HMSearchResultRow'>
+<method selector='articleId'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='baseurl'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='body'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='plain'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setArticleId:'>
+<arg declared_type='NSString*' index='0' name='articleId' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBaseurl:'>
+<arg declared_type='NSString*' index='0' name='baseurl' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBody:'>
+<arg declared_type='NSString*' index='0' name='body' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPlain:'>
+<arg declared_type='NSString*' index='0' name='plain' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTags:'>
+<arg declared_type='NSArray*' index='0' name='tags' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg declared_type='NSString*' index='0' name='title' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrl:'>
+<arg declared_type='NSString*' index='0' name='url' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tags'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='HMService'>
+<method selector='didReceiveLocalNotification:'>
+<arg declared_type='UILocalNotification*' index='0' name='notification' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='didReceiveRemoteNotification:'>
+<arg declared_type='NSDictionary*' index='0' name='userInfo' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method class_method='true' selector='flushPeerMessages:forPeer:onCompletion:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<arg declared_type='void (^)(BOOL)' function_pointer='true' index='2' name='onFlushComplete' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='flushSupportMessages:onCompletion:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='void (^)(BOOL)' function_pointer='true' index='1' name='onFlushComplete' type='@?'>
+<arg declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='openChat:'>
+<arg declared_type='UIViewController*' index='0' name='currentViewController' type='@'/>
+<retval declared_type='HMChatViewController*' type='@'/>
+</method>
+<method selector='openChat:withSetup:'>
+<arg declared_type='UIViewController*' index='0' name='currentViewController' type='@'/>
+<arg declared_type='void (^)(HMChatViewController *)' function_pointer='true' index='1' name='setupBlock' type='@?'>
+<arg declared_type='HMChatViewController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMChatViewController*' type='@'/>
+</method>
+<method selector='openChatViewInPopoverFromBarButtonItem:inDirection:withSetup:'>
+<arg declared_type='UIBarButtonItem*' index='0' name='currentItem' type='@'/>
+<arg declared_type='UIPopoverArrowDirection' index='1' name='direction' type='I' type64='Q'/>
+<arg declared_type='void (^)(HMChatPopoverController *)' function_pointer='true' index='2' name='setupBlock' type='@?'>
+<arg declared_type='HMChatPopoverController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMChatPopoverController*' type='@'/>
+</method>
+<method selector='openChatViewInPopoverFromCurrentView:inDirection:withSetup:'>
+<arg declared_type='UIView*' index='0' name='currentView' type='@'/>
+<arg declared_type='UIPopoverArrowDirection' index='1' name='direction' type='I' type64='Q'/>
+<arg declared_type='void (^)(HMChatPopoverController *)' function_pointer='true' index='2' name='setupBlock' type='@?'>
+<arg declared_type='HMChatPopoverController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMChatPopoverController*' type='@'/>
+</method>
+<method selector='openChatWithPush:withSetup:'>
+<arg declared_type='UIViewController*' index='0' name='currentViewController' type='@'/>
+<arg declared_type='void (^)(HMContentChatViewController *)' function_pointer='true' index='1' name='setupBlock' type='@?'>
+<arg declared_type='HMContentChatViewController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMContentChatViewController*' type='@'/>
+</method>
+<method selector='openHelpdeskArticle:fromCurrentView:'>
+<arg declared_type='NSString*' index='0' name='article' type='@'/>
+<arg declared_type='UIViewController*' index='1' name='currentViewController' type='@'/>
+<retval declared_type='HMHelpDeskArticleViewController*' type='@'/>
+</method>
+<method selector='openHelpdeskArticle:fromCurrentView:withSetup:'>
+<arg declared_type='NSString*' index='0' name='article' type='@'/>
+<arg declared_type='UIViewController*' index='1' name='currentViewController' type='@'/>
+<arg declared_type='void (^)(HMHelpDeskArticleViewController *)' function_pointer='true' index='2' name='setupBlock' type='@?'>
+<arg declared_type='HMHelpDeskArticleViewController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMHelpDeskArticleViewController*' type='@'/>
+</method>
+<method selector='openHelpdeskArticleInPopover:fromBarButtonItem:inDirection:withSetup:'>
+<arg declared_type='NSString*' index='0' name='article' type='@'/>
+<arg declared_type='UIBarButtonItem*' index='1' name='currentItem' type='@'/>
+<arg declared_type='UIPopoverArrowDirection' index='2' name='direction' type='I' type64='Q'/>
+<arg declared_type='void (^)(HMHelpDeskArticleViewPopoverController *)' function_pointer='true' index='3' name='setupBlock' type='@?'>
+<arg declared_type='HMHelpDeskArticleViewPopoverController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMHelpDeskArticleViewPopoverController*' type='@'/>
+</method>
+<method selector='openHelpdeskArticleInPopover:fromCurrentView:inDirection:withSetup:'>
+<arg declared_type='NSString*' index='0' name='article' type='@'/>
+<arg declared_type='UIView*' index='1' name='currentView' type='@'/>
+<arg declared_type='UIPopoverArrowDirection' index='2' name='direction' type='I' type64='Q'/>
+<arg declared_type='void (^)(HMHelpDeskArticleViewPopoverController *)' function_pointer='true' index='3' name='setupBlock' type='@?'>
+<arg declared_type='HMHelpDeskArticleViewPopoverController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMHelpDeskArticleViewPopoverController*' type='@'/>
+</method>
+<method selector='openHelpdeskArticleWithPush:fromCurrentView:withSetup:'>
+<arg declared_type='NSString*' index='0' name='article' type='@'/>
+<arg declared_type='UIViewController*' index='1' name='currentViewController' type='@'/>
+<arg declared_type='void (^)(HMContentHelpDeskArticleViewController *)' function_pointer='true' index='2' name='setupBlock' type='@?'>
+<arg declared_type='HMContentHelpDeskArticleViewController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMContentHelpDeskArticleViewController*' type='@'/>
+</method>
+<method selector='openHelpdeskSearch:'>
+<arg declared_type='UIViewController*' index='0' name='currentViewController' type='@'/>
+<retval declared_type='HMHelpDeskSearchViewController*' type='@'/>
+</method>
+<method selector='openHelpdeskSearch:withSetup:'>
+<arg declared_type='UIViewController*' index='0' name='currentViewController' type='@'/>
+<arg declared_type='void (^)(HMHelpDeskSearchViewController *)' function_pointer='true' index='1' name='setupBlock' type='@?'>
+<arg declared_type='HMHelpDeskSearchViewController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMHelpDeskSearchViewController*' type='@'/>
+</method>
+<method selector='openHelpdeskSearchInPopoverFromBarButtonItem:inDirection:withSetup:'>
+<arg declared_type='UIBarButtonItem*' index='0' name='currentItem' type='@'/>
+<arg declared_type='UIPopoverArrowDirection' index='1' name='direction' type='I' type64='Q'/>
+<arg declared_type='void (^)(HMHelpDeskSearchPopoverController *)' function_pointer='true' index='2' name='setupBlock' type='@?'>
+<arg declared_type='HMHelpDeskSearchPopoverController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMHelpDeskSearchPopoverController*' type='@'/>
+</method>
+<method selector='openHelpdeskSearchInPopoverFromCurrentView:inDirection:withSetup:'>
+<arg declared_type='UIView*' index='0' name='currentView' type='@'/>
+<arg declared_type='UIPopoverArrowDirection' index='1' name='direction' type='I' type64='Q'/>
+<arg declared_type='void (^)(HMHelpDeskSearchPopoverController *)' function_pointer='true' index='2' name='setupBlock' type='@?'>
+<arg declared_type='HMHelpDeskSearchPopoverController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMHelpDeskSearchPopoverController*' type='@'/>
+</method>
+<method selector='openHelpdeskSearchWithPush:withSetup:'>
+<arg declared_type='UIViewController*' index='0' name='currentViewController' type='@'/>
+<arg declared_type='void (^)(HMContentHelpDeskSearchViewController *)' function_pointer='true' index='1' name='setupBlock' type='@?'>
+<arg declared_type='HMContentHelpDeskSearchViewController*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='HMContentHelpDeskSearchViewController*' type='@'/>
+</method>
+<method selector='openURL:from:withDetails:'>
+<arg declared_type='NSURL*' index='0' name='url' type='@'/>
+<arg declared_type='NSString*' index='1' name='source' type='@'/>
+<arg declared_type='id' index='2' name='details' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPushToken:'>
+<arg declared_type='NSData*' index='0' name='token' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUser:'>
+<arg declared_type='NSString*' index='0' name='user' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWindow:'>
+<arg declared_type='UIWindow*' index='0' name='appWindow' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setup:withLaunchOptions:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<arg declared_type='NSDictionary*' index='1' name='launchOptions' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='sharedService'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='updateContext:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateCustomData:forKey:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<arg declared_type='NSString*' index='1' name='key' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateEmail:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateGeolocation:'>
+<arg declared_type='CLLocation*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateLocation:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateName:'>
+<arg declared_type='NSString*' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='chatView:cellForMessageRow:withTableView:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<arg declared_type='UITableView*' index='2' name='tableView' type='@'/>
+<retval declared_type='UITableViewCell*' type='@'/>
+</method>
+<method selector='chatView:didErrorOccur:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didOperatorAccept:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='operator' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didPeerGoOffline:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didPeerGoOnline:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didReceiveMessage:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didSendMessage:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:heightForMessageRow:withTableView:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<arg declared_type='UITableView*' index='2' name='tableView' type='@'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='chatView:willHandleURL:messageId:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='url' type='@'/>
+<arg declared_type='NSString*' index='2' name='messageId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='chatViewController:didErrorOccur:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didPeerComeOnline:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didPeerGoOffline:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didReceiveMessage:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didSendMessage:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:willHandleURL:messageId:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='url' type='@'/>
+<arg declared_type='NSString*' index='2' name='messageId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='chatViewControllerDidOperatorComeOnline:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewControllerDidOperatorGoOffline:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewControllerWillDismiss:'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:didErrorOccur:'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:didLoadArticle:withTitle:andURL:andBaseURL:andContent:'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:hasShownChatButton:'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='UIButton*' index='1' name='chatButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:willOpenChat:'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='id' index='1' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewControllerWillDismiss:'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didErrorOccur:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didPeerComeOnline:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didPeerGoOffline:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didReceiveMessage:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didSendMessage:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:willHandleURL:messageId:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='url' type='@'/>
+<arg declared_type='NSString*' index='2' name='messageId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentChatViewControllerDidOperatorComeOnline:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewControllerDidOperatorGoOffline:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewControllerWillDismiss:'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:didErrorOccur:'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:didSelectArticle:withTitle:andURL:andBaseURL:andContent:'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='id' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentSearchViewController:hasShownChatButton:'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='UIButton*' index='1' name='chatButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:willOpenChat:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='id' index='1' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:willRenderResults:forQuery:'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='NSMutableArray*' index='1' name='results' type='@'/>
+<arg declared_type='NSString*' index='2' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewControllerWillDismiss:'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didRegistrationFail:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didRegistrationSucceed:'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='operatorCheck:isOperatorAvailable:'>
+<arg declared_type='id' index='0' name='operatorCheck' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='operatorCheck:isOperatorOffline:'>
+<arg declared_type='id' index='0' name='operatorCheck' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchView:didErrorOccur:'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchView:didLoadArticle:withTitle:andURL:andBaseURL:andContent:'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchView:didSelectArticle:withTitle:andURL:andBaseURL:andContent:'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='searchView:willRenderResults:forQuery:'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSMutableArray*' index='1' name='results' type='@'/>
+<arg declared_type='NSString*' index='2' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:didErrorOccur:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:didSelectArticle:withTitle:andURL:andBaseURL:andContent:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='id' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='searchViewController:hasShownChatButton:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='UIButton*' index='1' name='chatButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:willOpenChat:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='id' index='1' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:willRenderResults:forQuery:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='NSMutableArray*' index='1' name='results' type='@'/>
+<arg declared_type='NSString*' index='2' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewControllerWillDismiss:'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidConnect:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidDisconnect:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidOperatorComeOnline:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidOperatorGoOffline:'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='HMChatOperatorAvailabilityCheckDelegate'>
+<method selector='operatorCheck:isOperatorAvailable:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='operatorCheck' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='operatorCheck:isOperatorOffline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='operatorCheck' type='@'/>
+<arg declared_type='NSString*' index='1' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMChatViewControllerDelegate'>
+<method selector='chatViewController:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didPeerComeOnline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didPeerGoOffline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didReceiveMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:didSendMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewController:willHandleURL:messageId:' type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='url' type='@'/>
+<arg declared_type='NSString*' index='2' name='messageId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='chatViewControllerDidOperatorComeOnline:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewControllerDidOperatorGoOffline:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatViewControllerWillDismiss:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMChatViewDelegate'>
+<method selector='chatView:cellForMessageRow:withTableView:' type='@20@0:4@8@12@16' type64='@40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<arg declared_type='UITableView*' index='2' name='tableView' type='@'/>
+<retval declared_type='UITableViewCell*' type='@'/>
+</method>
+<method selector='chatView:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didOperatorAccept:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='operator' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didPeerGoOffline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didPeerGoOnline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didReceiveMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:didSendMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='chatView:heightForMessageRow:withTableView:' type='f20@0:4@8@12@16' type64='d40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<arg declared_type='UITableView*' index='2' name='tableView' type='@'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='chatView:willHandleURL:messageId:' type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<arg declared_type='NSString*' index='1' name='url' type='@'/>
+<arg declared_type='NSString*' index='2' name='messageId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='viewDidConnect:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidDisconnect:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidOperatorComeOnline:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='viewDidOperatorGoOffline:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='chatView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMContentChatViewControllerDelegate'>
+<method selector='contentChatViewController:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didPeerComeOnline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didPeerGoOffline:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='peer' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didReceiveMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:didSendMessage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='HMChatMessage*' index='1' name='message' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewController:willHandleURL:messageId:' type='B20@0:4@8@12@16' type64='B40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='url' type='@'/>
+<arg declared_type='NSString*' index='2' name='messageId' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentChatViewControllerDidOperatorComeOnline:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewControllerDidOperatorGoOffline:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentChatViewControllerWillDismiss:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='contentChatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMContentHelpDeskArticleViewControllerDelegate'>
+<method selector='contentArticleViewController:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:didLoadArticle:withTitle:andURL:andBaseURL:andContent:' type='v32@0:4@8@12@16@20@24@28' type64='v64@0:8@16@24@32@40@48@56'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:hasShownChatButton:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='UIButton*' index='1' name='chatButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewController:willOpenChat:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<arg declared_type='id' index='1' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentArticleViewControllerWillDismiss:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='contentArticleViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMContentHelpDeskSearchViewControllerDelegate'>
+<method selector='contentSearchViewController:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:didSelectArticle:withTitle:andURL:andBaseURL:andContent:' type='B32@0:4@8@12@16@20@24@28' type64='B64@0:8@16@24@32@40@48@56'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='id' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='contentSearchViewController:hasShownChatButton:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='UIButton*' index='1' name='chatButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:willOpenChat:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='id' index='1' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewController:willRenderResults:forQuery:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<arg declared_type='NSMutableArray*' index='1' name='results' type='@'/>
+<arg declared_type='NSString*' index='2' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='contentSearchViewControllerWillDismiss:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='contentSearchViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMHelpDeskSearchViewControllerDelegate'>
+<method selector='searchViewController:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:didSelectArticle:withTitle:andURL:andBaseURL:andContent:' type='B32@0:4@8@12@16@20@24@28' type64='B64@0:8@16@24@32@40@48@56'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='NSString*' index='1' name='id' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='searchViewController:hasShownChatButton:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='UIButton*' index='1' name='chatButton' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:willOpenChat:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='id' index='1' name='chatViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewController:willRenderResults:forQuery:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<arg declared_type='NSMutableArray*' index='1' name='results' type='@'/>
+<arg declared_type='NSString*' index='2' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchViewControllerWillDismiss:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='id' index='0' name='searchViewController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMHelpDeskSearchViewDelegate'>
+<method selector='searchView:didErrorOccur:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSString*' index='1' name='error' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchView:didLoadArticle:withTitle:andURL:andBaseURL:andContent:' type='v32@0:4@8@12@16@20@24@28' type64='v64@0:8@16@24@32@40@48@56'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='searchView:didSelectArticle:withTitle:andURL:andBaseURL:andContent:' type='B32@0:4@8@12@16@20@24@28' type64='B64@0:8@16@24@32@40@48@56'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSString*' index='1' name='articleId' type='@'/>
+<arg declared_type='NSString*' index='2' name='title' type='@'/>
+<arg declared_type='NSString*' index='3' name='url' type='@'/>
+<arg declared_type='NSString*' index='4' name='baseURL' type='@'/>
+<arg declared_type='NSString*' index='5' name='content' type='@'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='searchView:willRenderResults:forQuery:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'>
+<arg declared_type='id' index='0' name='searchView' type='@'/>
+<arg declared_type='NSMutableArray*' index='1' name='results' type='@'/>
+<arg declared_type='NSString*' index='2' name='query' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HMRegisterUserDelegate'>
+<method selector='didRegistrationFail:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='didRegistrationSucceed:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='NSString*' index='0' name='app' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
