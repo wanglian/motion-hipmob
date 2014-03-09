@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <signatures version='1.0'>
-<string_constant name='HIPMOB_LIBRARY_VERSION_STRING' nsstring='true' value='3.3.3'/>
+<string_constant name='HIPMOB_LIBRARY_VERSION_STRING' nsstring='true' value='3.4.1'/>
 <enum name='HMContentHelpDeskArticleChatEnabledAlways' value='0'/>
 <enum name='HMContentHelpDeskArticleChatEnabledIfOperatorAvailable' value='1'/>
 <enum name='HMContentHelpDeskArticleChatEnabledNever' value='2'/>
